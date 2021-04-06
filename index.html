@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
 
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
-	<title>repl.it</title>
-	<link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-<body>
-	<form class="form" action="submit">
-		<input class="form-input" type="text">
-      <input class="form-btn" type="button" value="add">
-   </form>
-   <select name="sort" id="sort">
-	   <option value="sort-no">Без сортировик</option>
-	   <option value="sort-data">Сортировка по дате</option>
-	   <option value="sort-alphabet">Сортировка просто для Костяна</option>
-   </select>
+  <body>
+    <form class="form" action="submit">
+      <input class="form-input" type="text" />
+      <input class="form-btn" type="button" value="add" />
+    </form>
+    <select name="sort" id="sort">
+      <option value="sort-no">Без сортировик</option>
+      <option value="sort-data">Сортировка по дате</option>
+      <option value="sort-alphabet">Сортировка по Алфавиту</option>
+    </select>
     <ul id="root"></ul>
-	<ul id="root-checked"></ul>
+    <ul id="root-checked"></ul>
     <script src="script.js"></script>
   </body>
 </html>
