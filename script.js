@@ -55,11 +55,11 @@ const todosList = {
       el.addEventListener('click', () => this.removeCkbox(chboxId))
       
     })
-
+    /*
     const sorting = document.querySelector('#sorting')
     
     sorting.addEventListener('change', () => this.dataSort(sorting))
-    
+    */
     const btnsDel = document.querySelectorAll('.todo-del')
     btnsDel.forEach(el=>{
         //const todoType = el.className
@@ -85,7 +85,7 @@ const todosList = {
       el.addEventListener('click', ()=> this.moveDown(todoId,todoNextId) )
     })
   },
-
+/*
   dataSort: function () {
     console.log(sort.selectedIndex)
     this.data.sort(function(a,b){
@@ -93,7 +93,7 @@ const todosList = {
     })
     todosList.render()
   },
-
+*/
   removeCkbox: function (event) {
     this.data.forEach(el =>{
       if(event.id.substr(5) == el.id) el.checked = !el.checked
