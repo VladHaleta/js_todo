@@ -55,11 +55,21 @@ const todosList = {
       el.addEventListener('click', () => this.removeCkbox(chboxId))
       
     })
-    /*
-    const sorting = document.querySelector('#sorting')
     
-    sorting.addEventListener('change', () => this.dataSort(sorting))
+
+    /*
+    const sorting = document.querySelectorAll('option')
+
+    sorting.forEach(el =>{
+      el.addEventListener('click', () => this.dataSort(sorting))
+    })
+    
     */
+    
+    const sorting = document.querySelector('#sorting')
+    sorting.addEventListener('change', () => this.dataSort(sorting))
+    
+    
     const btnsDel = document.querySelectorAll('.todo-del')
     btnsDel.forEach(el=>{
         //const todoType = el.className
@@ -85,15 +95,33 @@ const todosList = {
       el.addEventListener('click', ()=> this.moveDown(todoId,todoNextId) )
     })
   },
-/*
+
   dataSort: function () {
-    console.log(sort.selectedIndex)
-    this.data.sort(function(a,b){
-      return a.text - b.text
-    })
-    todosList.render()
+    console.log("yo")
+    
+
+    if(sorting.selectedIndex == 2){
+      /*
+      this.data.sort(function(a,b){
+        if (a.text > b.text) {
+          return 1;
+        }
+        if (a.text < b.text) {
+          return -1;
+        }
+        // a должно быть равным b
+        return 0;
+      })
+      todosList.render()  
+      */
+     console.log("hyo")
+    }
+
+    
+    
+    
   },
-*/
+
   removeCkbox: function (event) {
     this.data.forEach(el =>{
       if(event.id.substr(5) == el.id) el.checked = !el.checked
